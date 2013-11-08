@@ -9,6 +9,21 @@
 #ifndef _Sudoku_alg_h
 #define _Sudoku_alg_h
 
+/*!
+ * 
+ *
+ *
+ */
+int isAvailable(int[][],int,int,int);
+
+/*!
+ *
+ *
+ *
+ *
+ *
+ */
+int fillsudoku(int[][],int,int);
 
 
 #endif
