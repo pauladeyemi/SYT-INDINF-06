@@ -8,11 +8,85 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <Sudoku.h>
+#include "Sudoku.h"
 
 
 int main()
 {
+    int check=0;
+    char c;
+    
+    do {
+        //Menü
+        printf("Auswahl:\n(a)Sudoku\n(b)X-Sudoku\n(e)Beenden\n");
+        scanf("%s",&c);
+        fflush(stdin);
+        
+        switch (c) {
+            case 'a':
+                printf("Auswahl:\n(a)Test Raetzel 1\n(b)Test Raetzes 2\n(c)Filename Eingeben\n(d)Eigens Raetzel eingeben\n(e)Zureuck\n");
+                scanf("%s",&c);
+                switch (c) {
+                    case 'a' :
+                        printf("Raetzel 1:\n");
+                        printf("Loesung:\n");
+                        break;
+                    case 'b' :
+                        printf("Raetzel 2:\n");
+                        printf("Loesung:\n");
+                        break;
+                    case 'c' :
+                        printf("File Raetzel:\n");
+                        printf("Loesung:\n");
+                        break;
+                    case 'd' :
+                        printf("Eigenes Raetzel:\n");
+                        printf("Loesung:\n");
+                        break;
+                    case 'e':
+                        break;
+                    default:
+                        printf("\nFalsche Eingabe\n\n");
+                        break;
+                }
+                break;
+            case 'b':
+                printf("Auswahl:\n(a)Test Raetzel 1\n(b)Test Raetzes 2\n(c)Filename Eingeben\n(d)Eigens Raetzel eingeben\n(e)Zureuck\n");
+                scanf("%s",&c);
+                switch (c) {
+                    case 'a' :
+                        printf("Raetzel 1:\n");
+                        printf("Loesung:");
+                        break;
+                    case 'b' :
+                        printf("Raetzel 2:\n");
+                        printf("Loesung:");
+                        break;
+                    case 'c' :
+                        printf("File Raetzel:\n");
+                        printf("Loesung:\n");
+                        break;
+                    case 'd' :
+                        printf("Eigenes Raetzel:\n");
+                        printf("Loesung:\n");
+                        break;
+                    case 'e':
+                        break;
+                    default:
+                        printf("\nFalsche Eingabe\n\n");
+                        break;
+                }
+                break;
+            case 'e':
+                check=1;
+                break;
+            default:
+                printf("\nFalsche Eingabe\n\n");
+                break;
+        }
+        fflush(stdin);
+    } while (check==0);
+/*
     int i, j;
     int sudoku[9][9]={{3, 0, 6, 5, 0, 8, 4, 0, 0},
         {5, 2, 0, 0, 0, 0, 0, 0, 0},
@@ -38,6 +112,6 @@ int main()
     {
         printf("\n\nNO SOLUTION\n\n");
     }
-    
+*/
     return EXIT_SUCCESS;
 }
