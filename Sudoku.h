@@ -9,6 +9,6 @@
 #ifndef _Sudoku_h
 #define _Sudoku_h
 
-
+int filetoarray(char *);
 
 #endif
