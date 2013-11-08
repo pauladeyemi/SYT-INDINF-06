@@ -1,4 +1,4 @@
-SYT-INDIF-06
+SYT-INDINF-06
 ============
 
 Sudoku
