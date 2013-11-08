@@ -115,3 +115,17 @@ int main()
 */
     return EXIT_SUCCESS;
 }
+
+int** filetoarray(char *fpath){
+    FILE *fp;
+    int sudoku[9][9];
+    
+    fp=fopen(fpath,"r");
+    
+    for(i=0 ; i<9 ; i++)
+        for(j=0 ; j<9 ; j++){
+            sudoku[i][j] = fgetc(fp) - '0';
+            fgetc(fp);
+        }
+    
+}
