@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int grid[9][9];
+int sudokuarr[9][9];
 
 int main()
 {
@@ -21,70 +21,66 @@ int main()
     
     do {
         //Menü
-        printf("Auswahl:\n(a)Sudoku\n(e)Beenden\n");
-        scanf("%s",&c);
-        fflush(stdin);
+        printf("Auswahl:\n(a)Test Raetzel 1\n(b)Test Raetzes 2\n(c)Filename Eingeben\n(e)Beenden\n");
         
-        switch (c) {
-            case 'a':
-                printf("Auswahl:\n(a)Test Raetzel 1\n(b)Test Raetzes 2\n(c)Filename Eingeben\n(e)Zureuck\n");
-                scanf("%s",&c);
-                switch (c) {
-                    case 'a' :
-                        raetsel1();
-                        ausgabe();
-                        if(fillsudoku(grid, 0, 0)){
-                            printf("Loesung:\n\n");
-                            ausgabe();
-                        }else{printf("NO SOLUTION\n\n");}
-                        break;
-                    case 'b' :
-                        raetsel2();
-                        ausgabe();
-                        if(fillsudoku(grid, 0, 0)){
-                            printf("Loesung:\n\n");
-                            ausgabe();
-                        }else{printf("NO SOLUTION\n\n");}
-                        break;
-                    case 'c' :
-                        filetoarray();
-                        ausgabe();
-                        if(fillsudoku(grid, 0, 0)){
+            scanf("%s",&c);
+            switch (c) {
+                case 'a' :
+                    raetsel1();
+                    ausgabe();
+                    if(fillsudoku(sudokuarr, 0, 0)){
                         printf("Loesung:\n\n");
                         ausgabe();
-                        }else{printf("NO SOLUTION\n\n");}
-                        break;
-                    case 'e':
-                        break;
-                    default:
-                        printf("\nFalsche Eingabe\n\n");
-                        break;
-                }
-                break;
-            case 'e':
-                check=1;
-                break;
-            default:
-                printf("\nFalsche Eingabe\n\n");
-                break;
-        }
+                    }else{printf("NO SOLUTION\n\n");}
+                    break;
+                case 'b' :
+                    raetsel2();
+                    ausgabe();
+                    if(fillsudoku(sudokuarr, 0, 0)){
+                        printf("Loesung:\n\n");
+                        ausgabe();
+                    }else{printf("NO SOLUTION\n\n");}
+                    break;
+                case 'c' :
+                    filetoarray();
+                    ausgabe();
+                    if(fillsudoku(sudokuarr, 0, 0)){
+                    printf("Loesung:\n\n");
+                    ausgabe();
+                    }else{printf("NO SOLUTION\n\n");}
+                    break;
+                case 'e':
+                    check=1;
+                    break;
+                default:
+                    printf("\nFalsche Eingabe\n\n");
+                    break;
+            }
+                
         fflush(stdin);
     } while (check==0);
 
     return EXIT_SUCCESS;
 }
 
+/**
+ * Funktion gibt den Aktuellen Array aus
+ */
 int ausgabe(){
     int i,j;
         for(i=0; i<9; ++i)
         {
             for(j=0; j<9; ++j)
-                printf("%d ", grid[i][j]);
+                printf("%d ", sudokuarr[i][j]);
             printf("\n");
         }
     }
 
-
+/**
+ * Funktion liest file ein, und wandelt dessen Inhalt in ein Array um
+ *
+ *
+ */
 int filetoarray(){
     FILE *pInput;
     
@@ -99,10 +95,11 @@ int filetoarray(){
 	char delimiter[] = ",;";
 	char *ptr;
     
+    //Algorithmus zum auslesen eines Files in ein Array
 	while (fgets(puffer, 20, pInput)) {
 		ptr = strtok(puffer, delimiter);
 		while (ptr != NULL) {
-			grid[colum][row] = atoi(ptr);
+			sudokuarr[colum][row] = atoi(ptr);
 			ptr = strtok(NULL, delimiter);
 			row++;
 		}
@@ -112,6 +109,10 @@ int filetoarray(){
     return 0;
     
 }
+
+/**
+ * Funktion wandelt ein vorgefertigtes CSV File "raetsel1.csv" in einen Array um
+ */
 int raetsel1(){
     FILE *pInput;
     
@@ -124,10 +125,11 @@ int raetsel1(){
 	char delimiter[] = ",;";
 	char *ptr;
     
+    //Algorithmus zum auslesen eines Files in ein Array
 	while (fgets(puffer, 20, pInput)) {
 		ptr = strtok(puffer, delimiter);
 		while (ptr != NULL) {
-			grid[colum][row] = atoi(ptr);
+			sudokuarr[colum][row] = atoi(ptr);
 			ptr = strtok(NULL, delimiter);
 			row++;
 		}
@@ -137,7 +139,9 @@ int raetsel1(){
     return 0;
     
 }
-
+/**
+ * Funktion wandelt ein vorgefertigtes CSV File "raetsel2.csv" in einen Array um
+ */
 int raetsel2(){
     FILE *pInput;
     
@@ -150,10 +154,11 @@ int raetsel2(){
 	char delimiter[] = ",;";
 	char *ptr;
     
+    //Algorithmus zum auslesen eines Files in ein Array
 	while (fgets(puffer, 20, pInput)) {
 		ptr = strtok(puffer, delimiter);
 		while (ptr != NULL) {
-			grid[colum][row] = atoi(ptr);
+			sudokuarr[colum][row] = atoi(ptr);
 			ptr = strtok(NULL, delimiter);
 			row++;
 		}
