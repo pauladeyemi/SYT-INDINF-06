@@ -6,24 +6,10 @@
 //
 //
 
-#ifndef _Sudoku_alg_h
-#define _Sudoku_alg_h
+#ifndef _Sudoku_h
+#define _Sudoku_h
 
-/*!
- * 
- *
- *
- */
 int isAvailable(int[][],int,int,int);
-
-/*!
- *
- *
- *
- *
- *
- */
 int fillsudoku(int[][],int,int);
-
 
 #endif

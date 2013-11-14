@@ -115,8 +115,27 @@ int main()
         fflush(stdin);
     } while (check==0);
 
+<<<<<<< HEAD
     
     
+=======
+    /*
+    if( fillsudoku(sudoku, 0, 0) )
+    {
+        
+        for(i=0; i<9; ++i)
+        {
+            for(j=0; j<9; ++j)
+                printf("%d ", sudoku[i][j]);
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("\n\nNO SOLUTION\n\n");
+    }
+    */
+>>>>>>> 340c091178251f4ca64c5bb3565a7f7148226e0e
 
     return EXIT_SUCCESS;
 }
