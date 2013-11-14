@@ -28,53 +28,68 @@ int main()
                 case 'a' :
                     raetsel1();
                     ausgabe();
+                    //Wenn Sudoku Lösbar, dann ausgabe von gelöstem Sudoku
+                    // sonst ausgabe "NO SOLUTION"
                     if(fillsudoku(sudokuarr, 0, 0)){
                         printf("Loesung:\n\n");
                         ausgabe();
-                    }else{printf("NO SOLUTION\n\n");}
+                    }
+                    else{
+                        printf("NO SOLUTION\n\n");
+                    }
                     break;
+                    
                 case 'b' :
                     raetsel2();
                     ausgabe();
+                    //Wenn Sudoku Lösbar, dann ausgabe von gelöstem Sudoku
+                    // sonst ausgabe "NO SOLUTION"
                     if(fillsudoku(sudokuarr, 0, 0)){
                         printf("Loesung:\n\n");
                         ausgabe();
                     }else{printf("NO SOLUTION\n\n");}
                     break;
+                    
                 case 'c' :
                     filetoarray();
                     ausgabe();
+                    //Wenn Sudoku Lösbar, dann ausgabe von gelöstem Sudoku
+                    // sonst ausgabe "NO SOLUTION"
                     if(fillsudoku(sudokuarr, 0, 0)){
                     printf("Loesung:\n\n");
                     ausgabe();
                     }else{printf("NO SOLUTION\n\n");}
                     break;
+                    
                 case 'e':
                     check=1;
                     break;
+                    
                 default:
                     printf("\nFalsche Eingabe\n\n");
                     break;
             }
-                
         fflush(stdin);
     } while (check==0);
 
     return EXIT_SUCCESS;
 }
 
+
+
 /**
  * Funktion gibt den Aktuellen Array aus
  */
 int ausgabe(){
     int i,j;
-        for(i=0; i<9; ++i)
-        {
+        for(i=0; i<9; ++i){
             for(j=0; j<9; ++j)
                 printf("%d ", sudokuarr[i][j]);
             printf("\n");
         }
-    }
+}
+
+
 
 /**
  * Funktion liest file ein, und wandelt dessen Inhalt in ein Array um
@@ -107,8 +122,9 @@ int filetoarray(){
 		colum = colum + 1;
 	}
     return 0;
-    
 }
+
+
 
 /**
  * Funktion wandelt ein vorgefertigtes CSV File "raetsel1.csv" in einen Array um
@@ -137,8 +153,10 @@ int raetsel1(){
 		colum = colum + 1;
 	}
     return 0;
-    
 }
+
+
+
 /**
  * Funktion wandelt ein vorgefertigtes CSV File "raetsel2.csv" in einen Array um
  */
@@ -166,5 +184,4 @@ int raetsel2(){
 		colum = colum + 1;
 	}
     return 0;
-    
 }
