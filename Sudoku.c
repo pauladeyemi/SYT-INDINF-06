@@ -15,7 +15,7 @@ int main()
 {
     int check=0;
     char c;
-    char *filepath=NULL;
+    char filepath[128];
     int i, j;
     int sudoku;
     
@@ -41,8 +41,8 @@ int main()
                         break;
                     case 'c' :
                         printf("File Raetzel:\n");
-                        scanf("%s",&filepath);
-                        
+                        scanf("%s", filepath);
+                        printf("Test");
                         sudoku=filetoarray(filepath);
                         
                         printf("Loesung:\n");
@@ -123,8 +123,7 @@ int filetoarray(char *fpath){
     
     for(i=0 ; i<9 ; i++)
         for(j=0 ; j<9 ; j++){
-            sudoku[i][j] = fgetc(fp) - '0';
-            fgetc(fp);
+            fscanf("%d%*c",sudoku[i][j]);
         }
     return sudoku;
 }
