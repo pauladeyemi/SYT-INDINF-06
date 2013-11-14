@@ -110,7 +110,7 @@ int filetoarray(){
 	char delimiter[] = ",;";
 	char *ptr;
     
-    //Algorithmus zum auslesen eines Files in ein Array
+    //Algorithmus zum einlesen eines Files in ein Array
 	while (fgets(puffer, 20, pInput)) {
 		ptr = strtok(puffer, delimiter);
 		while (ptr != NULL) {
@@ -141,7 +141,7 @@ int raetsel1(){
 	char delimiter[] = ",;";
 	char *ptr;
     
-    //Algorithmus zum auslesen eines Files in ein Array
+    //Algorithmus zum einlesen eines Files in ein Array
 	while (fgets(puffer, 20, pInput)) {
 		ptr = strtok(puffer, delimiter);
 		while (ptr != NULL) {
@@ -172,7 +172,7 @@ int raetsel2(){
 	char delimiter[] = ",;";
 	char *ptr;
     
-    //Algorithmus zum auslesen eines Files in ein Array
+    //Algorithmus zum einlesen eines Files in ein Array
 	while (fgets(puffer, 20, pInput)) {
 		ptr = strtok(puffer, delimiter);
 		while (ptr != NULL) {
