@@ -7,7 +7,7 @@
 //
 
 #include <stdio.h>
-#include "Sudoku_alg.h"
+
 
 int isAvailable(int sudoku[][9], int row, int col, int num)
 {

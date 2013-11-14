@@ -10,5 +10,8 @@
 #define _Sudoku_h
 
 int filetoarray();
+int ausgabe();
+int raetsel1();
+int raetsel2();
 
 #endif
