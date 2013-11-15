@@ -96,7 +96,7 @@ int ausgabe(){
  *
  *
  */
-int filetoarray(){
+int filetoarray(void){
     FILE *pInput;
     
 	//open file
@@ -129,7 +129,7 @@ int filetoarray(){
 /**
  * Funktion wandelt ein vorgefertigtes CSV File "raetsel1.csv" in einen Array um
  */
-int raetsel1(){
+int raetsel1(void){
     FILE *pInput;
     
 	//open file
@@ -160,7 +160,7 @@ int raetsel1(){
 /**
  * Funktion wandelt ein vorgefertigtes CSV File "raetsel2.csv" in einen Array um
  */
-int raetsel2(){
+int raetsel2(void){
     FILE *pInput;
     
 	//open file

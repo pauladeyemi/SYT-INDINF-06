@@ -1,0 +1,190 @@
+commit 933445e989de70d54aa45f6ca25755724812fd87
+Author: Nikolaus Schrack <nschrack@student.tgm.ac.at>
+Date:   Thu Nov 14 20:06:52 2013 +0100
+
+    Documentation
+
+ Dokumentation.docx | Bin 0 -> 982774 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fd783a388d4c6b64af19eb64e3b79b82462f26e6
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Thu Nov 14 20:03:53 2013 +0100
+
+    added comments, changed structure
+
+ Sudoku.c | 105 +++++++++++++++++++++++++++++++++------------------------------
+ Sudoku.o | Bin 4812 -> 4536 bytes
+ 2 files changed, 55 insertions(+), 50 deletions(-)
+
+commit 6086c2fbdd1061c6053c322ddf688921e9287466
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Thu Nov 14 18:57:09 2013 +0100
+
+    updated project
+    
+    fixed bugs
+
+ Sudoku.c     | 183 +++++++++++++++++++++++++----------------------------------
+ Sudoku.h     |   3 +
+ Sudoku.o     | Bin 0 -> 4812 bytes
+ Sudoku_alg.c |   2 +-
+ Sudoku_alg.o | Bin 0 -> 1716 bytes
+ makefile     |   2 +-
+ 6 files changed, 82 insertions(+), 108 deletions(-)
+
+commit 1156d37f17151e86b4973db6263c79c376ef5ea4
+Merge: 1e365bf 340c091
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Thu Nov 14 18:30:11 2013 +0100
+
+    Merge branch 'master' of https://github.com/padeyemi-tgm/SYT-INDIF-06
+    
+    Conflicts:
+    	Sudoku.c
+
+commit 1e365bf23b6afeb3ea38995f80f30c9e0a1e1cef
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Thu Nov 14 18:29:28 2013 +0100
+
+    minor fixes
+
+ Sudoku.c | 102 +++++++++++++++++++++++++++++++++++++++++++++------------------
+ Sudoku.h |   2 +-
+ 2 files changed, 75 insertions(+), 29 deletions(-)
+
+commit 340c091178251f4ca64c5bb3565a7f7148226e0e
+Author: Nikolaus Schrack <nschrack@student.tgm.ac.at>
+Date:   Thu Nov 14 18:29:16 2013 +0100
+
+    Makefile
+
+ Sudoku.c     |  3 ++-
+ Sudoku_alg.h | 18 ++----------------
+ makefile     | 14 ++++++++++++++
+ 3 files changed, 18 insertions(+), 17 deletions(-)
+
+commit 429f21fed75aa514c1c037528f2c134bf73db56d
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Thu Nov 14 17:13:21 2013 +0100
+
+    minor fixes
+
+ Sudoku.c | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+
+commit b83de2d6010ba1c0ca2db1d8d1b11cd43099bf9f
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Fri Nov 8 17:45:12 2013 +0100
+
+    updated main & filetoarray
+
+ Sudoku.c | 31 +++++++++++++++----------------
+ Sudoku.h |  2 +-
+ 2 files changed, 16 insertions(+), 17 deletions(-)
+
+commit 8724c2a4a9f7c27441fd37ea1554ea9a1860d359
+Author: Nikolaus Schrack <nschrack@student.tgm.ac.at>
+Date:   Fri Nov 8 17:07:27 2013 +0100
+
+    updated raetsel1.csv
+
+ raetsel1.csv | 1 +
+ raetsel2.csv | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit 7b2452d05255783bcecb6c377f7c93b8674fe0ef
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Fri Nov 8 17:04:20 2013 +0100
+
+    added filetoarray
+
+ Sudoku.c     | 14 ++++++++++++++
+ Sudoku_alg.c |  2 +-
+ 2 files changed, 15 insertions(+), 1 deletion(-)
+
+commit 93314fd5157ca2b9b6946c067093f654fd22d554
+Author: Nikolaus Schrack <nschrack@student.tgm.ac.at>
+Date:   Fri Nov 8 16:35:52 2013 +0100
+
+    added command line interface
+
+ Sudoku.c | 78 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 76 insertions(+), 2 deletions(-)
+
+commit a37575692c8819e2e1d63b60eb4f02bd7db00795
+Author: Nikolaus Schrack <nschrack@student.tgm.ac.at>
+Date:   Fri Nov 8 15:26:12 2013 +0100
+
+    added raetsel1.csv minor changes
+
+ raetsel1.csv | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+commit f6e69bb0555968a622dc87e8d243c2f90a08c809
+Merge: e88418f d94eedf
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Fri Nov 8 15:25:22 2013 +0100
+
+    Merge branch 'master' of https://github.com/padeyemi-tgm/SYT-INDIF-06
+
+commit e88418fc5043f11f426ca9bc2d3200ada784eb80
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Fri Nov 8 15:25:16 2013 +0100
+
+    Updated c- & header-files
+
+ Sudoku.c     | 83 ++++++++----------------------------------------------------
+ Sudoku_alg.c | 73 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Sudoku_alg.h | 15 +++++++++++
+ 3 files changed, 99 insertions(+), 72 deletions(-)
+
+commit d94eedf85970da57c059b157ff89347c4b5872cc
+Author: Nikolaus Schrack <nschrack@student.tgm.ac.at>
+Date:   Fri Nov 8 15:19:28 2013 +0100
+
+    added sudoku.csv files
+
+ raetsel1.csv | 9 +++++++++
+ raetsel2.csv | 9 +++++++++
+ 2 files changed, 18 insertions(+)
+
+commit 4d80a919484f1352547ece33164ffbb451556145
+Author: padeyemi-tgm <adeyemi.paul@student.tgm.ac.at>
+Date:   Fri Nov 8 15:01:52 2013 +0100
+
+    Added .gitignore & header files
+
+ .gitignore   |   1 +
+ Sudoku.c     | 111 ++++++++++++++++++++++++++++++++++++++++++++++++++++++-----
+ Sudoku.h     |  14 ++++++++
+ Sudoku_alg.h |  14 ++++++++
+ 4 files changed, 132 insertions(+), 8 deletions(-)
+
+commit 63b08dcc1e69496933a5973af0c54e469bfe4af2
+Author: AdeyemiPaul <adeyemi.paul@student.tgm.ac.at>
+Date:   Fri Nov 8 14:09:13 2013 +0100
+
+    Created Sudoku.c & Sudoku_alg.c
+
+ Sudoku.c     | 9 +++++++++
+ Sudoku_alg.c | 9 +++++++++
+ 2 files changed, 18 insertions(+)
+
+commit af4bdd0557a598ad72b10dbea61b3cbb6c9e9c7d
+Author: Paul Adeyemi <padeyemi@student.tgm.ac.at>
+Date:   Fri Nov 8 14:04:45 2013 +0100
+
+    Update README.md
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5b9130cbf1156a3247d54356c242b9a1635230d4
+Author: Paul Adeyemi <padeyemi@student.tgm.ac.at>
+Date:   Fri Nov 8 05:00:09 2013 -0800
+
+    Initial commit
+
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)

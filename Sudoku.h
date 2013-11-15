@@ -9,9 +9,9 @@
 #ifndef _Sudoku_h
 #define _Sudoku_h
 
-int filetoarray();
-int ausgabe();
-int raetsel1();
-int raetsel2();
+int filetoarray(void);
+int ausgabe(void);
+int raetsel1(void);
+int raetsel2(void);
 
 #endif
